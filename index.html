@@ -1,57 +1,859 @@
 <!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>Liuurl by ai948880736</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Liuurl</h1>
-      <h2 class="project-tagline"></h2>
-      <a href="https://github.com/ai948880736/LiuURL" class="btn">View on GitHub</a>
-      <a href="https://github.com/ai948880736/LiuURL/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/ai948880736/LiuURL/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>100度</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			border: 0;
+		}
+		ul,ol{
+			list-style: none;
+		}
+		em,i{
+			font-style: normal;
+		}
+		.index{
+			width: 960px;
+			margin: 0 auto;
+			font-family: "微软雅黑";
+		}
+		.head{
+			height: 300px;
+		}
+		/*头部第一栏*/
+		.head_up{
+			overflow: hidden;
+			font-size: 12px;
+			height: 30px;
+			background: url("images/head_top_bgcolor.jpg");
+			border-radius: 7px;
+		}
+		.head_up_leftCity{
+			float: left;
+			height: 21px;
+			padding-left: 20px;
+			padding-top: 5px;
+		}
+		.head_up_leftCity a{
+			display: inline-block;
+			width: 42px;
+			height: 21px;
+			background: url("images/head_top_bgButtom.jpg") no-repeat;
+			text-decoration: none;
+			line-height: 21px;
+			color: #999;
+			margin: 0 2px;
+			text-align: center;
+		}
+		.head_up_leftCity a:hover{
+			color: red;
+		}
+		.head_up_leftCity span{
+			padding-right: 7px;
+			color: #666;
+		}
+		.head_up_rightManage{
+			float: right;
+			padding-top: 5px;
+			color: #d5d5d5;
+			padding-right: 31px;
+		}
+		.head_up_rightManage a{
+			color: #666;
+			text-decoration: none;
+		}
+		.head_up_rightManage a:hover{
+			color: #666;
+		}
+		.head_up_rightManage img{
+			padding-right: 6px;
+		}
+		/*头部第二栏*/
+		.head_center{
+			overflow: hidden;
+			font-size: 12px;
+			font-weight: normal;
+			padding-top: 10px;
+		}
+		.head_images_leftMove{
+			float: left;
+		}
+		.head_images_leftMove a{
+			display: inline-block;
+			width: 48px;
+			height: 49px;
+			margin-left: 17px;
+			text-decoration: none;
+		}
+		.head_images_leftMove span{
+			display: inline-block;
+			padding-top: 50px;
+			padding-left: 11px;
+		}
+		.head_images_leftMove a.head_center_images-1{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-1.jpg") no-repeat;
+		}
+		.head_images_leftMove a:hover.head_center_images-1{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-1.jpg") no-repeat;
+		}
+		.head_images_leftMove a.head_center_images-2{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-2.jpg") no-repeat;
+		}
+		.head_images_leftMove a:hover.head_center_images-2{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-2.jpg") no-repeat;
+		}
+		.head_images_leftMove a.head_center_images-3{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-3.jpg") no-repeat;
+		}
+		.head_images_leftMove a:hover.head_center_images-3{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-3.jpg") no-repeat;
+		}
+		.head_images_leftMove a.head_center_images-4{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-4.jpg") no-repeat;
+		}
+		.head_images_leftMove a:hover.head_center_images-4{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-4.jpg") no-repeat;
+		}
+		.head_images_leftMove a.head_center_images-5{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-5.jpg") no-repeat;
+		}
+		.head_images_leftMove a:hover.head_center_images-5{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-5.jpg") no-repeat;
+		}
+		.head_images_centerMove{
+			float: left;
+			padding-left: 38px;
+		}
+		.head_images_rightMove{
+			float: right;
+			
+		}
+		.head_images_rightMove a{
+			display: inline-block;
+			height: 49px;
+			text-decoration: none;
+		}
+		.head_images_rightMove span{
+			display: inline-block;
+			padding-top: 48px;
+			padding-right: 17px;
+		}
+		.head_images_rightMove a.head_center_images-6{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-6.jpg") no-repeat;
+		}
+		.head_images_rightMove a:hover.head_center_images-6{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-6.jpg") no-repeat;
+		}
+		.head_images_rightMove a.head_center_images-7{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-7.jpg") no-repeat;
+		}
+		.head_images_rightMove a:hover.head_center_images-7{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-7.jpg") no-repeat;
+		}
+		.head_images_rightMove a.head_center_images-8{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-8.jpg") no-repeat;
+		}
+		.head_images_rightMove a:hover.head_center_images-8{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-8.jpg") no-repeat;
+		}
+		.head_images_rightMove a.head_center_images-9{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-9.jpg") no-repeat;
+		}
+		.head_images_rightMove a:hover.head_center_images-9{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-9.jpg") no-repeat;
+		}
+		.head_images_rightMove a.head_center_images-10{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_images-10.jpg") no-repeat;
+		}
+		.head_images_rightMove a:hover.head_center_images-10{
+			cursor: pointer;
+			color: #000;
+			background: url("images/head_center_bgimages-10.jpg") no-repeat;
+		}
+		/*头部第三栏*/
+		.head_below{
+			margin-top: 18px;
+			width: 960px;
+		}
+		.head_below_bg{
+			height: 127px;
+			background: url("images/head_below.jpg") 0 1px no-repeat;
+		}
+		.head_below_bgc{
+			padding-left: 226px;
+		}
+		.head_below_button a{
+			display: inline-block;
+			width: 81px;
+			height: 27px;
+			border-top: 1px solid #f8d0bf;
+			border-left: 1px solid #f8d0bf;
+			border-right: 1px solid #f8d0bf;
+			border-radius: 6px 6px 0 0;
+			font-size: 12px;
+			color: #000;
+			margin-right: 1px;
+			background-color: #fff;
+			text-decoration: none;
+			text-align: center;
+			line-height: 27px;
+		}
+		.head_below_bg a:hover{
+			color: #fff;
+			border-bottom: 0;
+			background-color: #e21c01;
+		}
+		.below_input_seek{
+			padding-top: 20px;
+			float: left;
+		}
+		.below_input_seek input{
+			width: 405px;
+			height: 22px;
+			font-size: 18px;
+			border-top: 1px solid #ca8c83;
+			border-radius: 5px;
+			color: #ea7a7a;
+		}
+		/*.below_input_seek input-placeholder {
+			color: #ea7a7a;
+		}*/
+		.below_input_seek a{
+			display: inline-block;
+			width: 61px;
+			height: 23px;
+			text-decoration: none;
+			background: url("images/below_seek.jpg");
+		}
+		.below_input_text{
+			float: right;
+			color: #fff;
+			font-size: 12px;
+			padding-top: 16px;
+			padding-right: 37px;
+		}
+		.head_below_bgt{
+			font-size: 12px;
+			float: left;
+  			padding-top: 29px;
+		}
+		.below_bgt_images{
+			float: left;
+			padding-top: 2px;
+		}
+		.below_bgt_text{
+			float: left;
+			padding-left: 10px;
+		}
+		.main{
+			overflow: hidden;
+			*zoom: 1;
+			height: 100%;
+		}
+		.main_left{
+			float: left;
+			width: 710px;
+		}
+		.main_right{
+			float: right;
+			width: 242px;
+			padding-left: 5px;
+		}
+		.footer{
+			background-color: #f9f9f9;
+			text-align: center;
+			font-size: 12px;
+			font-family: "微软雅黑";
+			border: 1px solid #e5e5e5;
+			margin-top: 10px;
+		}
+		.footer a{
+			text-decoration: none;
+			color: #000;
+		}
+		.footer_move{
+			padding-top: 7px;
+			padding-bottom: 24px;
+		}
+		.footer_move li{
+			padding-top: 13px;
+			color: #767676;
+		}
+		.footer_move span{
+			color: #919191;
+		}
+	</style>
+	<!--[if IE 6]>
+		<script src="DD_belatedPNG_0.0.8a.js"></script>
+		<script>
+		DD_belatedPNG.fix('*');
+		</script>	
+	<![endif]-->
+	<!-- DD_belatedPNG.fix('*');里面的参数填的是受影响的标签，如果只是希望img标签受影响可以写成DD_belatedPNG.fix('img'); -->
+	<!--[if lt IE 9]> 　　[removed][removed] 　　<![endif]-->
+</head>
+<body>
+	<div class="index">
+		<!-- 头部 -->
+		<div class="head">
+			<!-- 头部第一栏 -->
+			<div class="head_up">
+				<div class="head_up_leftCity">
+					<span>切换城市：</span>
+					<a href="###">北京</a><a href="###">上海</a><a href="###">福州</a><a href="###">广州</a><a href="###">青岛</a>
+				</div>
+				<div class="head_up_rightManage">
+						<a href="###"><img src="images/head_top_images-1.jpg">加盟100度</a>丨<a href="###"><img src="images/head_top_images-2.jpg">店铺管理</a>
+				</div>
+			</div>
+			<!-- 头部第二栏 -->
+			<div class="head_center">
+				<div class="head_images_leftMove">
+					<a href="###" class="head_center_images-1"><span>美食</span></a><a href="###" class="head_center_images-2"><span>夜店</span></a><a href="###" class="head_center_images-3"><span>文化</span></a><a href="###" class="head_center_images-4"><span>购物</span></a><a href="###" class="head_center_images-5"><span>休闲</span></a>
+				</div>
+				<div class="head_images_centerMove"><a href="###"><img src="images/head_center_images.jpg"></a></div>
+				<div class="head_images_rightMove">
+					<a href="###" class="head_center_images-6"><span>烧客空间</span></a><a href="###" class="head_center_images-7"><span>知道分子</span></a><a href="###" class="head_center_images-8"><span>白吃白拿</span></a><a href="###" class="head_center_images-9"><span>烧客论坛</span></a><a href="###" class="head_center_images-10"><span style="margin-left: -4px;">企业俱乐部</span></a>
+				</div>
+			</div>
+			<!-- 头部第三栏 -->
+			<div class="head_below">
+				<div class="head_below_bg">
+					<div class="head_below_bgc">
+						<div class="head_below_button">
+							<a href="###">搜店</a><a href="###">地址</a><a href="###">优惠券</a><a href="###">全文</a><a href="###">视频</a>
+						</div>
+						<div class="below_input_seek">
+							<input type="text"  placeholder="&nbsp;&nbsp;例如：荷棠雨坊烤鱼&nbsp;或&nbsp;樱花日本料理">
+							<a href="###">&nbsp;</a>
+						</div>
+						<div class="below_input_text">
+								<p>金钱豹、大江南、湘水之珠、德瑀楼</p>
+								<p>荷棠鱼坊烤鱼、SOHO尚都、湘味楼...</p>
+						</div>
+						<div class="head_below_bgt">
+							<div class="below_bgt_images"><img src="images/UPDATE.jpg"></div>
+							<div class="below_bgt_text"><span style="color: red">萱萱</span>&nbsp;<span style="color: #999999">五分钟前</span>&nbsp;<span>写了一篇文章：那些灿烂华美的瞬间...</span></div>
+							<!-- <div class="below_bgt_button"><a href="###">&nbsp;</a><a href="###">&nbsp;</a></div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 
-    <section class="main-content">
-      <h3>
-<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+		<div class="main">
+			<div class="main_left">
+				<div class="main_left_Lv1">
+					<div class="Lv1_left">
+						<div class="Lv1_left_top">
+							<span>WHAT'HOT</span>
+							<div class="Lv1_left_move"><a href="###"><img src="images/Video_Icon.jpg"></a></div>
+						</div>
+						<div class="Lv1_video">
+							<iframe height=285 width=318 src="http://player.youku.com/embed/XMTMxNTYzOTc1Ng==" frameborder=0 allowfullscreen></iframe>
+						</div>
+						<div class="Lv1_left_bottom">
+							<img src="images/Video_logo.jpg">
+							<ol>
+								<li><span>▪</span>现场实录：杭州机场国航系统的崩溃</li>
+								<li><span>▪</span>网友自拍国航航班晚点后的遭遇</li>
+								<li><span>▪</span>【拍客】绝对最奢侈的航班&nbsp;注意第41秒</li>
+							</ol>
+						</div>
+					</div>
+					<div class="Lv1_right">
+						<a href="###">HOT&nbsp;SHOP&nbsp;<span>红店铺</span></a><a href="###">EW&nbsp;SHOP&nbsp;<span>新开张</span></a>
+						<div class="Lv1_right_center">
+							<div class="Lv1_center-1">
+								<div class="Lv1_center_left"><img src="images/Lv1_img-1.jpg" class="i1"><div class="i2"><img src="images/Lv1_img-2.png"></div></div>
+								<div class="Lv1_center_right">
+									<ol>
+										<li><span>御舟和涵珍园国际酒店</span></li>
+										<li>区域：朝阳/CBD</li>
+										<li>人均：180元</li>
+										<li>人气：12321</li>
+									</ol>
+								</div>
+							</div>
+							<div class="Lv1_center-1">
+								<div class="Lv1_center_left"><img src="images/Lv1_img-1.jpg" class="i1"></div>
+								<div class="Lv1_center_right">
+									<ol>
+										<li><span>御舟和涵珍园国际酒店</span></li>
+										<li>区域：朝阳/CBD</li>
+										<li>人均：180元</li>
+										<li>人气：12321</li>
+									</ol>
+								</div>
+							</div>
+							<div class="Lv1_center-1">
+								<div class="Lv1_center_left"><img src="images/Lv1_img-1.jpg" class="i1"></div>
+								<div class="Lv1_center_right">
+									<ol>
+										<li><span>御舟和涵珍园国际酒店</span></li>
+										<li>区域：朝阳/CBD</li>
+										<li>人均：180元</li>
+										<li>人气：12321</li>
+									</ol>
+								</div>
+							</div>
+							<div class="Lv1_more"><img src="images/Lv1_more.jpg"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main_left_Lv2"><a href="###">&nbsp;</a></div>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here <a href="https://guides.github.com/features/mastering-markdown/">using GitHub Flavored Markdown</a>, select a template crafted by a designer, and publish. After your page is generated, you can check out the new <code>gh-pages</code> branch locally. If you’re using GitHub Desktop, simply sync your repository and you’ll see the new branch.</p>
+				<div class="main_left_Lv3">
+					<div class="main_Lv3_left">
+						<div class="main_Lv3_top">
+							<span class="s1">LUCKY YODAY<p>每日活动</p></span>
+							<div class="Lv3_div-1"><span class="s2">2014.2</span></div>
+						</div>
+						<div class="main_Lv3_center">
+							<img src="images/shoe.jpg">
+							<div class="Lv3_center_introduction">
+								<a href="###">07</a><a href="###">21</a><span>本日主题XXXX&nbsp;XXXX</span>
+								<p>迟到的荣誉——维米尔的写实主义风俗画迟到的荣誉维米尔画迟到的荣誉维米尔米尔</p>
+							</div>
+						</div>
+						<div class="main_Lv3_bottom">
+							<div class="head_gradient">
+								<ol><li><span>MON</span>
+								<span>TUE</span>
+								<span>WED</span>
+								<span>THU</span>
+								<span>FRI</span>
+								<span>SAT</span>
+								<span>SUN</span></li></ol>
+							</div>
+							<div class="head_table">
+								<table cellspacing="3" cellpadding="0">
+									<tr>
+										<td id="t1">29</td>
+										<td id="t2">30</td>
+										<td>1</td>
+										<td>2</td>
+										<td>3</td>
+										<td>4</td>
+										<td>5</td>
+									</tr>
+									<tr>
+										<td>6</td>
+										<td>7</td>
+										<td>8</td>
+										<td>9</td>
+										<td>10</td>
+										<td>11</td>
+										<td>12</td>
+									</tr>
+									<tr>
+										<td>13</td>
+										<td>14</td>
+										<td>15</td>
+										<td>16</td>
+										<td>17</td>
+										<td>18</td>
+										<td>19</td>
+									</tr>
+									<tr>
+										<td>20</td>
+										<td class="ta1"><a href="###">&nbsp;</a></td>
+										<td>22</td>
+										<td>23</td>
+										<td class="ta2"><a href="###">&nbsp;</a></td>
+										<td>25</td>
+										<td>26</td>
+									</tr>
+									<tr>
+										<td>27</td>
+										<td>28</td>
+										<td>29</td>
+										<td>30</td>
+										<td>31</td>
+										<td>1</td>
+										<td>2</td>
+									</tr>
+									<tr>
+										<td id="t3">3</td>
+										<td id="t4">4</td>
+										<td id="t5">5</td>
+										<td id="t6">6</td>
+										<td id="t7">7</td>
+										<td id="t8">8</td>
+										<td id="t9">9</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="main_Lv3_right">
+						<div class="Lv3_head_recommend">
+							<span class="s3">RECOMMEND<p>精彩推荐</p></span>
+							<div class="Lv3_div-2"><span class="s4">BEST</span></div>
+						</div>
+						<div class="Lv3_center_images">
+							<div class="Lv3_center_top">
+								<div class="left_Large">
+									<img src="images/mmm.jpg">
+								</div>
+								<div class="right_Thumbnails">
+									<a href="###"><img src="images/Lv3_img-1.jpg"></a><a href="###"><img src="images/Lv3_img-2.jpg"></a><a href="###"><img src="images/Lv3_img-3.jpg"></a>
+								</div>
+							</div>
+							<div class="tx1"><span>爸爸去哪儿~</span></div>
+						</div>
+						<div class="Lv3_bottom_text">
+							<ol>
+								<li class="bg-1">
+									<a href="###">生活中哪些商品的包装有缺陷野田</a><span>08/07/22</span>
+								</li>
+								<li class="bg-2">
+									<a href="###">老店换新颜，丰泽园野田重张亮相...</a><span>08/07/22</span>
+								</li>
+								<li class="bg-1">
+									<a href="###">生活中哪些商品的包装有缺陷野田</a><span>08/07/22</span>
+								</li>
+								<li class="bg-2">
+									<a href="###">老店换新颜，丰泽园野田重张亮相...</a><span>08/07/22</span>
+								</li>
+								<li class="bg-2">
+									<a href="###">生活中哪些商品的包装有缺陷野田</a><span>08/07/22</span>
+								</li>
+								<li class="bg-1">
+									<a href="###">性感红唇妆&nbsp;模特明星野田都爱它</a><span>08/07/22</span>
+								</li>
+								<li class="bg-1">
+									<a href="###">野田凪野田&nbsp;日本全能时尚设计美女</a><span>08/07/22</span>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="main_left_Lv4">
+					<div class="Lv4_left_head">
+						<a href="###">SUBWAY&nbsp;<span>地铁交通</span></a><a href="###">EW&nbsp;MAP&nbsp;<span>生活圈</span></a>
+						<div class="Lv4_site">
+							<div><img src="images/site.jpg"></div>
+							<div class="site_button">
+								<a href="###" class="sb1">1号线</a><a href="###" class="sb2">2号线</a><a href="###" class="sb4">13号线</a><a href="###" class="sb3">8通线</a><a href="###" class="sb4">5号线</a>
+							</div>
+						</div>
+					</div>
+					<div class="Lv4_right_head">
+						<div class="Lv4_head_text">
+							<span>BBS</span><span style="color: #000">&nbsp;论坛</span><span class="sbg">&nbsp;</span>
+						</div>
+						<div class="Lv4_forum">
+							<ol>
+								<li>
+									<a href="###">
+										<span class="number">01</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">02</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">03</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">04</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">05</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">06</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE no-text">ONE</span></em>
+									</a>
+								</li>
+								<li>
+									<a href="###">
+										<span class="number">07</span><span class="explain">保你没见过的古怪餐厅</span><span class="referral">世说新语</span><em><span class="a-text">画皮之——日剧中的手机</span><span class="ONE">ONE</span></em>
+									</a>
+								</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div class="main_left_Lv2"><a href="###">&nbsp;</a></div>
+				<div class="main_left_Lv5">
+					<div class="Lv5_left">
+						<div class="Lv4_head_text">
+							<span>LIFESTYLE&nbsp;ADVICE</span><span style="color: #000">&nbsp;知道份子</span><span class="sbg">&nbsp;</span>
+						</div>
+						<div class="Lv4_quiz">
+							<!-- <span class="x1">&nbsp;</span> --><a href="###">有人在问</a><a href="###">有人知道</a><a href="###">热门问题</a><!-- <span class="x2">&nbsp;</span> -->
+						</div>
+						<div class="Lv4_headline">
+								<span class="Lv4_headline_s1">标&nbsp;&nbsp;&nbsp;&nbsp;题</span><span class="Lv4_headline_s2">状态</span>
+								<div class="Lv4_headline_center">
+									<ol>
+										<li class="headline_bg-1">
+											<span class="dot">&nbsp;</span>
+											<a class="headline_text"><em>▪</em>&nbsp;<span class="text_grey">[</span><span class="text_red">美食</span><span class="text_grey">]</span>&nbsp;推荐几款性价比比较好的冰箱...</a>
+										</li>
+										<li class="headline_bg-2">
+											<span class="dot">&nbsp;</span>
+											<a class="headline_text"><em>▪</em>&nbsp;<span class="text_grey">[</span><span class="text_red">美食</span><span class="text_grey">]</span>&nbsp;推荐几款性价比比较好的冰箱</a>
+										</li>
+										<li class="headline_bg-1">
+											<span class="dot">&nbsp;</span>
+											<a class="headline_text"><em>▪</em>&nbsp;<span class="text_grey">[</span><span class="text_red">美食</span><span class="text_grey">]</span>&nbsp;推荐几款性价比比较好的冰箱</a>
+										</li>
+										<li class="headline_bg-2">
+											<span class="dot">&nbsp;</span>
+											<a class="headline_text"><em>▪</em>&nbsp;<span class="text_grey">[</span><span class="text_red">美食</span><span class="text_grey">]</span>&nbsp;推荐几款性价比比较好的冰箱</a>
+										</li>
+										<li class="headline_bg-2">
+											<span class="dot">&nbsp;</span>
+											<a class="headline_text"><em>▪</em>&nbsp;<span class="text_grey">[</span><span class="text_red">美食</span><span class="text_grey">]</span>&nbsp;推荐几款性价比比较好的冰箱</a>
+											<span class="dot">&nbsp;</span>
+										</li class="headline_bg-2">
+									</ol>
+									<div class="Lv4_search">
+										<span>搜搜谁知道&nbsp;:&nbsp;</span><input type="text" placeholder="输入关键字"><a href="###">GO</a>
+									</div>
+								</div>
+						</div>
+					</div>
+					<div class="Lv5_right">
+						<div class="Lv4_head_text">
+							<span>HOT</span><span style="color: #000">&nbsp;红人烧客</span><span class="sbg">&nbsp;</span>
+						</div>
+						<div class="Lv5_images">
+							<div id="star_1"><a href="###" id="tideway"><span>HTO</span><p>潮流服饰</p><p>任我行</p></a><a href="###"><img src="images/mm-1.jpg"></a><a href="###"><img src="images/mm-2.jpg"></a></div>
+							<div id="star_2">
+								<a href="###"><img src="images/mm-3.jpg"></a><a href="###"><img src="images/mm-4.jpg"></a><a href="###"><img src="images/mm-5.jpg"></a><a href="###"><img src="images/mm-6.jpg"></a>
+							</div>
+							<div id="star_3">
+								<a href="###"><img src="images/mm-7.jpg"></a><a href="###"><img src="images/mm-8.jpg"></a><a href="###"><img src="images/mm-9.jpg"></a><a href="###"><img src="images/mm-10.jpg"></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main_left_Lv6">
+					<div class="help">
+						<div class="help_1">
+							<span id="HELP">HELP</span>&nbsp;<span id="ZX">在线帮助</span>
+							<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您有任何问题，都可以通过全国免费电话，或MSN在线客服与我们联系！</p>
+							<a href="###" id="contact_1"><img src="images/phone.jpg">&nbsp;<span>4006-100-516</span></a><a href="###" id="contact_2"><img src="images/mailbox.jpg">&nbsp;<span>100du.com@live.cn</span></a>
+						</div>
+						<div class="help_2">
+							<span id="user">用户帮助</span><span id="trade">商户帮助</span>
+							<ul>
+								<li><a href="###"><span><i>■</i>&nbsp;金币是什么</span></a><a href="###"><span id="guidance_1"><i>■</i>&nbsp;如何成为明星商户</span></a></li>
+								<li><a href="###"><span><i>■</i>&nbsp;怎么查看我的等级</span></a><a href="###"><span id="guidance_2"><i>■</i>&nbsp;邮件推广</span></a></li>
+								<li><a href="###"><span><i>■</i>&nbsp;怎么赚积分</span></a><a href="###"><span id="guidance_3"><i>■</i>&nbsp;论坛推广方法</span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="media">
+						<div class="Lv4_head_text">
+							<span>100DU&nbsp;IN&nbsp;THE&nbsp;MEDIA</span><span style="color: #000">&nbsp;媒体声音</span><span class="sbg">&nbsp;</span>
+						</div>
+						<div class="media_1">
+							<ul>
+								<li><a href="###"><img src="images/logo-4.jpg" alt="logo-4"><span>日本最大的财经杂志《钻石周刊》对100度享乐网的报道</span></a></li>
+								<li><a href="###"><img src="images/logo-1.jpg" alt="logo-1"><span>视频网站100度享乐网获网络视听许可证</span></a></li>
+								<li><a href="###"><img src="images/logo-2.jpg" alt="logo-2"><span>互联网上的视频橱窗</span></a></li>
+								<li><a href="###"><img src="images/logo-3.jpg" alt="logo-3"><span>享乐主义的机会</span></a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="main_right">
+				<div class="register">
+					<div class="register_1">
+						<span id="LOAD">LOAD</span><span>&nbsp;登录</span>
+					</div>
+					<div class="register_2">
+						<ul>
+							<li>
+								<span>用户名：</span><input type="text" class="text-1"><label id="label"><input name="Fruit" type="checkbox" value="" /><span>记住我</span></label>
+							</li>
+							<li>
+								<span id="password">密<i>&nbsp;</i>码：</span><input type="password" class="text-1"><a href="###">登录</a>
+							</li>
+						</ul>
+					</div>
+					<div class="register_3">
+						<span><i>■</i>新用户注册</span><span><i>■</i>忘记密码了</span>
+					</div>
+				</div>
+				<div class="dial">
+					<span id="turn">转动疯抢盘</span><span id="prize">免费得大奖</span><a href="###">GO</a>
+				</div>
+				<div class="LOGO"></div>
+				<div class="coupons">
+					<div class="Lv4_head_text">
+							<span>COUPONS</span><span style="color: #000">&nbsp;抢卷儿</span><span class="sbg">&nbsp;</span>
+					</div>
+					<div class="coupons_button">
+						<a href="###">人气</a><a href="###">推荐</a><a href="###">最新</a>
+					</div>
+					<div class="coupons_explain">
+						<span id="shop_user">商店名</span><span id="province">省</span><span id="print">打印</span>
+						<ul>
+							<li>
+								<span class="dot_1">&nbsp;</span>
+								<i>■</i><span class="explain_move">老北京一尊黄牛</span><span class="percent_move">12%</span><span class="number_move">345</span>
+							</li>
+							<li>
+								<span class="dot_1">&nbsp;</span>
+								<i>■</i><span class="explain_move">老北京一尊黄牛</span><span class="percent_move">12%</span><span class="number_move">345</span>
+							</li>
+							<li>
+								<span class="dot_1">&nbsp;</span>
+								<i>■</i><span class="explain_move">老北京一尊黄牛</span><span class="percent_move">12%</span><span class="number_move">345</span>
+							</li>
+							<li>
+								<span class="dot_1">&nbsp;</span>
+								<i>■</i><span class="explain_move">老北京一尊黄牛</span><span class="percent_move">12%</span><span class="number_move">345</span>
+							</li>
+							<li>
+								<span class="dot_1">&nbsp;</span>
+								<i>■</i><span class="explain_move">老北京一尊黄牛</span><span class="percent_move">12%</span><span class="number_move">345</span>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="shop">
+					<div class="Lv4_head_text">
+							<span>SHOP</span><span style="color: #000">&nbsp;今日推荐</span><span class="sbg">&nbsp;</span>
+					</div>
+					<div class="shop_1">
+						<ul>
+							<li><img src="images/chicken.jpg"><a href="###">汉菜国际美食<span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a><span class="dot_1">&nbsp;</span></li>
+							<li><img src="images/chicken.jpg"><a href="###">汉菜国际美食<span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a><span class="dot_1">&nbsp;</span></li>
+							<li><img src="images/chicken.jpg"><a href="###">汉菜国际美食<span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a><span class="dot_1">&nbsp;</span></li>
+							<li><img src="images/chicken.jpg"><a href="###">汉菜国际美食<span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a><span class="dot_1">&nbsp;</span></li>
+						</ul>
+					</div>
+				</div>
+				<div class="shop_360">
+					<div class="Lv4_head_text">
+							<span>360°SHOP</span><span style="color: #000">&nbsp;全景逛店</span><span class="sbg">&nbsp;</span>
+					</div>
+					<div class="grogshop">
+						<img src="images/grogshop.jpg">
+						<p>苹果雪梨排骨汤</p>
+					</div>
+				</div>
+				<div class="shop_discount">
+					<div class="Lv4_head_text">
+							<span>SHOP</span><span style="color: #000">&nbsp;折扣店</span><span class="sbg">&nbsp;</span>
+					</div>
+					<div class="shop_discount_1">
+						<ul>
+							<li id="shop"><img src="images/chicken.jpg"><a href="###">汉菜国际美食<span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a></li>
+						</ul>
+						<ul id="ul">
+							<li class="shop_text"><span class="dot_1">&nbsp;</span><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>美食</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>购物</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>购物</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p></li>
+						</ul>
+					</div>
+				</div>
+				<div class="coupnos_league">
+					<div class="Lv4_head_text">
+							<span>COUPONS</span><span style="color: #000">&nbsp;最新加盟</span><span class="sbg">&nbsp;</span>
+					</div>
+					<div class="coupnos_league_1">
+						<ul>
+							<li><img src="images/coupnos_img_1.jpg"><img src="images/coupnos_img_2.jpg"></li>
+							<li id="text_red"><span>汉菜国际美食百汇</span><span>汉菜国际美食百汇</span></li>
+							<li><a href="###"><span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a><a href="###" id="text_a"><span><i>口味：</i>创意中餐</span><span><i>区域：</i>朝阳/CBD</span></a></li>
+						</ul>
+					</div>
+					<div class="shop_discount_1">
+						<ul id="ul">
+							<li class="shop_text"><span class="dot_1">&nbsp;</span><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>美食</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>购物</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>购物</em>]</span><span>老北京一尊黄牛</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p><span class="dot_1">&nbsp;</span></li>
+							<li class="shop_text"><p><i>■</i><span class="bracket">[<em>休闲</em>]</span><span>瀚茶缘（雍和宫殿）</span></p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-<h3>
-<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Designer Templates</h3>
+		<div class="footer">
+			<div class="footer_move">
+				<ol>
+					<li>
+						<a href="###">关于我们</a><span>丨</span><a href="###">联系我们</a><span>丨</span><a href="###">版权声明</a><span>丨</span><a href="###">加入我们</a><span>丨</span><a href="###">问题反馈</a><span>丨</span><a href="###">友情链接</a><span>丨</span><a href="###">网站地图</a><span>丨</span><a href="###">地图索引</a>
+					</li>
+					<li>
+						Coppright&nbsp;©&nbsp;2008&nbsp;www.100du.com&nbsp;100度享乐网&nbsp;版权所有&nbsp;&nbsp;京ICP证070374号
+					</li>
+				</ol>
+			</div>
+		</div>
+	</div>
 
-<p>We’ve crafted some handsome templates for you to use. Go ahead and click 'Continue to layouts' to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved.</p>
-
-<h3>
-<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Creating pages manually</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://help.github.com/articles/basic-writing-and-formatting-syntax/#mentioning-users-and-teams" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor’s GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
-
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/ai948880736/LiuURL">Liuurl</a> is maintained by <a href="https://github.com/ai948880736">ai948880736</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
-      </footer>
-
-    </section>
-
-  
-  </body>
+	<script type="text/javascript" src="html5shiv.js"></script>
+</body>
 </html>
